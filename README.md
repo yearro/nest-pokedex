@@ -35,3 +35,21 @@ yarn start:dev
 ```
 localhost:3000/api/v2/seed
 ```
+
+# Build de producción
+
+1.- Crear el archivo ```.env.prod````
+2.- Llenar las variables de entonrno de producción
+3.- Crear la nueva la imagen
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+# Notas
+
+Para permisos en mac
+
+```
+sudo chmod -R g+rw "$HOME/.docker"
+```
